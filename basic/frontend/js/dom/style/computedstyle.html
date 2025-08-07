@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta charset="UTF-8"><title>계산된 스타일 확인</title>
+<style>
+  #box3 { color: blue; font-weight: bold; }
+</style>
+</head>
+<body>
+  <div id="box3">Hello</div>
+  <button onclick="logComputedStyle()">스타일 확인</button>
+
+  <script>
+    function logComputedStyle() {
+      const el = document.getElementById("box3");
+      const computed = getComputedStyle(el);
+      console.log("color:", computed.color);
+      console.log("font-weight:", computed.fontWeight);
+    }
+  </script>
+</body>
+</html>

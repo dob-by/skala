@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>좋아하는 과일 선택</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    select {
+      font-size: 1rem;
+      padding: 4px;
+    }
+    #result {
+      margin-top: 16px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>좋아하는 과일을 선택하세요</h1>
+
+  <select id="fruitSelect">
+    <option value="">-- 과일 선택 --</option>
+    <option value="사과">사과</option>
+    <option value="바나나">바나나</option>
+    <option value="귤">귤</option>
+    <option value="포도">포도</option>
+    <option value="딸기">딸기</option>
+  </select>
+
+  <p id="result">
+    선택된 과일: <span id="selectedFruit">없음</span>
+  </p>
+
+  <script>
+    const selectEl = document.getElementById('fruitSelect');
+    const displayEl = document.getElementById('selectedFruit');
+
+    selectEl.addEventListener('change', () => {
+      const fruit = selectEl.value;
+      displayEl.textContent = fruit || '없음';
+    });
+  </script>
+</body>
+</html>

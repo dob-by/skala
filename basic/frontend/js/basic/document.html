@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="msg"> 원래 텍스트</p>
+    <button id="btn">클릭!</button>
+    <script>
+        document.getElementById("btn").addEventListener("click", function() {
+            document.getElementById("msg").innerHTML = "안녕하세요";
+        });
+    </script>
+</body>
+</html>

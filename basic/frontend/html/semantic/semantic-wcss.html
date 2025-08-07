@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>semantic tag</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        header {
+            background: #f88;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background: #6f9;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        aside {
+            background: #fcc;
+            padding: 1rem;
+        }
+
+        main {
+            background: #cdf;
+            padding: 1rem;
+        }
+
+        article {
+            background: #9cf;
+            padding: 1rem;
+        }
+
+        figure {
+            background: #ff9;
+            padding: 1rem;
+            margin: 0 0 1rem 0;
+        }
+
+        p {
+            background: #dfd;
+            padding: 1rem;
+        }
+
+        section {
+            background: #0af;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        footer {
+            background: #c9f;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "nav nav"
+                "aside main"
+                "footer footer";
+            /* fr : fraction 이며, 1fr은 가용 공간의 1부분을 의미 */
+            grid-template-columns: 250px 1fr;
+            grid-template-rows: auto auto 1fr auto; /* auto : 내용에 따라 높이 결정 */
+            min-height: 100vh; /* vh : viewport height, 전체 화면 높이의 100% */
+        }
+
+        header   { grid-area: header; }
+        nav      { grid-area: nav; }
+        aside    { grid-area: aside; }
+        main     { grid-area: main; }
+        footer   { grid-area: footer; }
+    </style>
+</head>
+<body class="container">
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <h2>Sidebar</h2>
+        <p>This is a sidebar with additional information.</p>
+    </aside>
+    <main>
+        <article>
+            <figure>
+                <img src="media/rome.jpg" alt="예시 이미지" width="400" height="300">
+                <figcaption>로마의 경기장</figcaption>
+            </figure>
+            <p>날씨가 좋은 어느날의 로마를 여행하는 것은 정말 멋진 경험입니다.</p>
+            <section>
+                <h2>전화번호</h2>
+                <p>+39 06 1234567</p>
+            </section>
+        </article>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>This is a brief description of our website.</p>
+        </section>
+        <section id="services">
+            <h2>Services</h2>
+            <p>Details about the services we offer.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>How to get in touch with us.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Website</p>
+    </footer>
+</body>
+</html>

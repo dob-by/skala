@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Transition + Transform Demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    /* 상단 박스 */
+    .box {
+      width: 200px;
+      height: 100px;
+      background-color: green;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .box:hover {
+      background-color: yellow;
+      color: black;
+    }
+
+    /* 하단 버튼 */
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* 회전 클래스 */
+    .box.rotated {
+      margin-bottom: 20px;
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+
+  <div id="targetBox" class="box">hover me</div>
+
+  <button onclick="rotateBox()">상단 박스 회전</button>
+
+  <script>
+    function rotateBox() {
+      const box = document.getElementById('targetBox');
+      box.classList.toggle('rotated'); // 토글 방식으로 회전 및 원상복구
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<button id="myBtn">클릭하세요</button>
+
+<script>
+  const btn = document.getElementById('myBtn');
+
+  // 첫 번째 핸들러 등록
+  btn.onclick = function () {
+    alert('첫 번째 알림!');
+  };
+
+  // 두 번째 핸들러 등록 (기존 것을 덮어씌움)
+  btn.onclick = function () {
+    alert('두 번째 알림!');
+  };
+</script>

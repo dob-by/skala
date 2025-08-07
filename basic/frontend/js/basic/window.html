@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userName;
+        do {
+            userName = window.prompt("your name is?");
+        } while (!userName);
+        window.confirm("your name is " + userName + " is correct?");
+        window.alert("Hello, " + userName + "!");
+        // _blank: 새로운 탭 열기, _self: 현재 탭에서 열기
+
+        const intervalId = window.setInterval(() => {
+            console.time("interval");
+            console.log(window.navigator.onLine ? "Online" : "Offline");
+            console.log(window.navigator.cookieEnabled ? "Cookies are enabled" : "Cookies are disabled");
+            console.log(window.navigator.hardwareConcurrency + " logical processors");
+            console.log("User agent string: " + window.navigator.userAgent);
+            console.log("Language: " + window.navigator.language);
+            console.log("Platform: " + window.navigator.platform);
+            console.timeEnd("interval");
+        }, 1000);
+
+        window.setTimeout(() => {
+            window.clearInterval(intervalId); // clearInterval()은 setInterval()의 ID를 인자로 받아야 합니다.
+            console.log("### interval cleared");
+        }, 3000);
+    </script>
+</body>
+</html>

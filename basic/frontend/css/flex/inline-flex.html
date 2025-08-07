@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .inline-flex-box {
+      display: inline-flex;
+      border: 2px solid #333;
+      padding: 10px;
+      margin: 10px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .item {
+      width: 30px;
+      height: 30px;
+      background-color: tomato;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 여러 개의 inline-flex 박스를 한 줄에 배치 -->
+  <div class="inline-flex-box">
+    <div class="item">A</div>
+    <div class="item">B</div>
+  </div>
+
+  <div class="inline-flex-box">
+    <div class="item">C</div>
+    <div class="item">D</div>
+  </div>
+
+</body>
+</html>

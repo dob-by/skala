@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>오늘의 뉴스 – SKALA 뉴스</title>
+  <style>
+    .container {
+      display: flex;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 페이지 최상단 헤더 -->
+  <header>
+    <h1>오늘의 뉴스</h1>
+  </header>
+
+  <!-- 내비게이션 -->
+  <nav>
+    <ul>
+      <li><a href="#society">사회</a></li>
+      <li><a href="#economy">경제</a></li>
+      <li><a href="#sports">스포츠</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- 주요 콘텐츠 -->
+    <main>
+      <!-- 사회 섹션 -->
+      <section id="society">
+        <h2>사회</h2>
+        <article>
+          <h3>독감 유행</h3>
+          <figure>
+            <img src="media/flu-outbreak.jpg" alt="독감 바이러스 이미지" width="600">
+            <figcaption>전국 독감 환자 급증 현황</figcaption>
+          </figure>
+          <p>이번 겨울철 들어 독감 환자가 급증했습니다. 보건당국은 백신 접종과 개인 위생 수칙 준수를 당부하고 있습니다.</p>
+        </article>
+      </section>
+
+      <!-- 경제 섹션 -->
+      <section id="economy">
+        <h2>경제</h2>
+        <article>
+          <h3>증권 시장 상승세</h3>
+          <p>최근 글로벌 증시가 호조를 보이면서 코스피 지수가 3% 이상 상승했습니다. 기관과 외국인의 매수가 눈에 띕니다.</p>
+        </article>
+      </section>
+
+      <!-- 스포츠 섹션 -->
+      <section id="sports">
+        <h2>스포츠</h2>
+        <article>
+          <h3>축구 경기 하이라이트</h3>
+          <video controls width="640">
+            <source src="media/soccer-highlights.mp4" type="video/mp4">
+            브라우저가 video 요소를 지원하지 않습니다.
+          </video>
+          <p>어제 열린 국가대표 친선 경기에서 후반 추가시간 극적인 골이 터졌습니다. 아래 영상을 통해 주요 장면을 확인하세요.</p>
+        </article>
+      </section>
+    </main>
+
+    <!-- 사이드바 -->
+    <aside>
+      <h3>관련 뉴스</h3>
+      <ul class="related-news">
+        <li>
+          <h4>코로나19 신규 확진자 감소</h4>
+          <p>전국 신규 확진자 수가 전주 대비 20% 감소했습니다.</p>
+        </li>
+        <li>
+          <h4>주요 기업 실적 발표</h4>
+          <p>삼성전자, SK하이닉스 등 주요 기업들의 4분기 실적이 예상을 웃돌았습니다.</p>
+        </li>
+        <li>
+          <h4>올림픽 대표팀 선발전</h4>
+          <p>2024 파리 올림픽 대표팀 최종 명단이 발표되었습니다.</p>
+        </li>
+      </ul>
+    </aside>
+  </div>
+
+  <!-- 페이지 바닥글 -->
+  <footer style="text-align: center;">
+    © 2025 SKALA 뉴스.
+  </footer>
+
+</body>
+</html>

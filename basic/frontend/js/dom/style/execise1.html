@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"><title>classList 조작</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+      color: red;
+      font-weight: bold;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="box4">이 문장을 강조해보세요!</div>
+  <button id="toggle">강조 토글</button>
+
+  <script>
+
+    let btn = document.getElementById("toggle");
+    btn.addEventListener("click", function() {
+      const el = document.getElementById("box4");
+      if (el.classList.toggle("highlight")) {
+      }
+    });
+  </script>
+</body>
+</html>

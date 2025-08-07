@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta charset="UTF-8"><title>인라인 스타일 직접 조작</title></head>
+<body>
+  <div id="box1">Hello</div>
+  <button onclick="changeStyle()">색상 변경</button>
+
+  <script>
+    function changeStyle() {
+      const el = document.getElementById("box1");
+      el.style.color = "red";  // 인라인 스타일 직접 조작
+    }
+  </script>
+</body>
+</html>

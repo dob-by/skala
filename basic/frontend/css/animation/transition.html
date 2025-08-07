@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Transition Button 예제</title>
+    <style>
+      button {
+        margin-left: 100px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: lightblue;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 4s ease, transform 2s ease;
+      }
+
+      button:hover {
+        background-color: blue;
+        transform: scale(3);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="margin-left: 100px">Transition 버튼 예제</h2>
+    <button>마우스를 올려보세요</button>
+  </body>
+</html>

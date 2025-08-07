@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>오늘의 뉴스</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", "Noto Sans KR", sans-serif;
+        background: #f9fafc;
+        color: #333;
+        margin: 0;
+        padding: 2rem 1rem;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        color: #2c3e50;
+      }
+
+      nav {
+        background: #ffffff;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        margin-bottom: 2rem;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #007acc;
+        font-weight: bold;
+      }
+
+      section {
+        margin-bottom: 3rem;
+      }
+
+      section h2 {
+        border-bottom: 2px solid #007acc;
+        padding-bottom: 0.5rem;
+        color: #007acc;
+        font-size: 1.5rem;
+      }
+
+      article {
+        background: #fff;
+        padding: 1.5rem;
+        margin-top: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      article h3 {
+        margin-top: 0;
+        color: #333;
+      }
+
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      footer {
+        text-align: center;
+        font-size: 0.85rem;
+        color: #888;
+        margin-top: 4rem;
+        border-top: 1px solid #eee;
+        padding-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>오늘의 뉴스</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#society">사회</a></li>
+        <li><a href="#economy">경제</a></li>
+        <li><a href="#sports">스포츠</a></li>
+      </ul>
+    </nav>
+
+    <section id="society">
+      <h2>사회</h2>
+      <article>
+        <h3>'독감' 유행 다시 불붙어…약국 매약·처방 소폭 증가세</h3>
+        <img
+          src="https://www.kpanews.co.kr/common_files/upload_files/article/img/a_102_1_1.jpg"
+          alt="병원 대기실 사진"
+        />
+        <p>
+          연령별로는 13세에서 18세가 56.1명, 7세에서 12세가 53.8명 순으로 높은
+          발생률을 보이며, 소아·청소년을 중심으로 인플루엔자 유행이 지속되고
+          있다.
+        </p>
+      </article>
+    </section>
+
+    <section id="economy">
+      <h2>경제</h2>
+      <article>
+        <h3>증시 반등에 주식 거래대금 14% 증가…결제대금은 줄어</h3>
+        <img
+          src="https://image.edaily.co.kr/images/photo/files/NP/S/2025/07/PS25072200757.jpg"
+          alt="주식거래대금"
+        />
+        <p>
+          거래대금은 1071조 6000억원으로 직전 반기 대비 17.4% 증가했다. 차감률은
+          66.6%로 같은 기간 대비 0.2%포인트 감소했다.
+        </p>
+      </article>
+    </section>
+
+    <section id="sports">
+      <h2>스포츠</h2>
+      <article>
+        <h3>“축구 경기 하이라이트”</h3>
+        <p>
+          어젯밤 열린 국가대표 친선 경기에서 한국은 2:1로 일본을 꺾으며 승리를
+          거두었다.
+        </p>
+        <video controls>
+          <source src="media/highlight.mp4" type="video/mp4" />
+          브라우저가 video 태그를 지원하지 않습니다.
+        </video>
+      </article>
+    </section>
+
+    <footer>© 2025 SKALA 뉴스.</footer>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+      }
+      .container {
+        position: relative; /* 기준점 */
+        width: 300px;
+        height: 200px;
+        border: 1px solid #ccc;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+      }
+      .blue {
+        background: skyblue;
+      }
+      .orange {
+        background: orange;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box blue"></div>
+      <div class="box orange"></div>
+    </div>
+  </body>
+</html>

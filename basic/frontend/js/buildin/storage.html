@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="load">데이터 불러오기</button>
+    <button id="save">데이터 저장</button>
+    <button id="clear">데이터 삭제</button>
+    <script>
+      // 저장
+      document.getElementById('save').onclick = () => {
+        sessionStorage.setItem('sessionStorage', 'save');
+        localStorage.setItem('localStorage', 'save');
+        alert('저장 완료');
+      };
+    
+      // 불러오기
+      document.getElementById('load').onclick = () => {
+        const sessionStorageValue = sessionStorage.getItem('sessionStorage');
+        const localStorageValue = localStorage.getItem('localStorage');
+        alert(`Session Storage: ${sessionStorageValue}\nLocal Storage: ${localStorageValue}`);
+      };
+    
+      // 삭제
+      document.getElementById('clear').onclick = () => {
+        sessionStorage.removeItem('sessionStorage');
+        localStorage.removeItem('localStorage');
+        alert('삭제 완료');
+      };
+    </script>        
+</body>
+</html>

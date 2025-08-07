@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>앨범</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 150px);
+        grid-template-areas:
+          "a b ."
+          "a c ."
+          "d e f";
+      }
+      .box {
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .box img {
+        width: 100%;
+        height: 100%;
+        max-width: 300px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box1">
+        <img src="media/burj.JPG" />
+      </div>
+      <div class="box box2">
+        <img src="media/merlion.JPG" />
+      </div>
+      <div class="box box3">
+        <img src="media/opera.jpg" />
+      </div>
+      <div class="box box4">
+        <img src="media/sydney-bridge.JPG" />
+      </div>
+      <div class="box box5">
+        <img src="media/sydney-opera.JPG" />
+      </div>
+      <div class="box box6">
+        <img src="media/rome.JPG" />
+      </div>
+    </div>
+  </body>
+</html>

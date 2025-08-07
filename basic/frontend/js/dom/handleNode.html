@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>노드 조작 예제</title>
+  </head>
+  <body>
+    <div id="container">
+      <p id="old">기존 문장</p>
+    </div>
+
+    <button id="btnAdd">노드 추가</button>
+    <button id="btnRemove">노드 제거</button>
+    <button id="btnReplace">노드 교체</button>
+
+    <script>
+      let el = document.getElementById("btnAdd");
+      let el2 = document.getElementById("btnRemove");
+      let el3 = document.getElementById("btnReplace");
+
+      el.addEventListener("click", addNode);
+      el2.addEventListener("click", removeNode);
+      el3.addEventListener("click", replaceNode);
+
+      function addNode() {
+        const newElement = document.createElement("p"); // <p> 요소 생성
+        newElement.textContent = "추가된 문장"; // 텍스트 설정
+        newElement.id = "new"; // id 설정
+        newElement.style.color = "blue"; // 스타일 설정
+        document.getElementById("container").appendChild(newElement); // 추가
+      }
+
+      function removeNode() {
+        const container = document.getElementById("container");
+        const target = document.getElementById("new");
+        if (target) {
+          container.removeChild(target); // target 요소 제거
+        }
+      }
+
+      function replaceNode() {
+        const container = document.getElementById("container");
+        const oldNode = document.getElementById("old");
+
+        const newNode = document.createElement("h3");
+        newNode.id = "old"; // 새 노드에 동일한 id 설정
+        newNode.textContent = "새로운 노드로 교체됨";
+
+        if (oldNode) {
+          container.replaceChild(newNode, oldNode); // target → h3로 교체
+        }
+      }
+    </script>
+  </body>
+</html>

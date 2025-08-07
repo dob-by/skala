@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Flex Layout</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container-fluid p-4">
+        <h2 class="mb-4">Bootstrap Flex Layout 예제</h2>
+        
+        <!-- 첫 번째 예제: Bootstrap 카드 사용 -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4 class="mb-0">1. Bootstrap 카드 - 기본 Flex Row (왼쪽 정렬)</h4>
+            </div>
+            <div class="card-body">
+                <div class="d-flex flex-row gap-2">
+                    <div class="card text-center" style="width: 150px;">
+                        <div class="card-body py-3">
+                            <p class="card-text mb-0">Flex item 1</p>
+                        </div>
+                    </div>
+                    <div class="card text-center" style="width: 150px;">
+                        <div class="card-body py-3">
+                            <p class="card-text mb-0">Flex item 2</p>
+                        </div>
+                    </div>
+                    <div class="card text-center" style="width: 150px;">
+                        <div class="card-body py-3">
+                            <p class="card-text mb-0">Flex item 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 두 번째 예제: Bootstrap 카드 - flex-row-reverse -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4 class="mb-0">2. Bootstrap 카드 - Flex Row Reverse (오른쪽 정렬, 역순)</h4>
+            </div>
+            <div class="card-body">
+                <div class="d-flex flex-row-reverse gap-2">
+                    <div class="card text-center" style="width: 150px;">
+                        <div class="card-body py-3">
+                            <p class="card-text mb-0">Flex item 1</p>
+                        </div>
+                    </div>
+                    <div class="card text-center" style="width: 150px;">
+                        <div class="card-body py-3">
+                            <p class="card-text mb-0">Flex item 2</p>
+                        </div>
+                    </div>
+                    <div class="card text-center" style="width: 150px;">
+                        <div class="card-body py-3">
+                            <p class="card-text mb-0">Flex item 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 추가 Bootstrap 컴포넌트 예제들 -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4 class="mb-0">3. 다른 Bootstrap 컴포넌트 사용 예제</h4>
+            </div>
+            <div class="card-body">
+                <!-- Bootstrap 버튼 사용 -->
+                <div class="mb-4">
+                    <h6 class="text-muted">Bootstrap 버튼 - 오른쪽 정렬 (순서 유지)</h6>
+                    <div class="d-flex flex-row justify-content-end gap-2">
+                        <button type="button" class="btn btn-outline-primary">Flex item 1</button>
+                        <button type="button" class="btn btn-outline-primary">Flex item 2</button>
+                        <button type="button" class="btn btn-outline-primary">Flex item 3</button>
+                    </div>
+                </div>
+                
+                <!-- Bootstrap 배지 사용 -->
+                <div class="mb-4">
+                    <h6 class="text-muted">Bootstrap 배지 - 중앙 정렬</h6>
+                    <div class="d-flex flex-row justify-content-center gap-3">
+                        <span class="badge bg-secondary fs-6 py-3 px-4">Flex item 1</span>
+                        <span class="badge bg-secondary fs-6 py-3 px-4">Flex item 2</span>
+                        <span class="badge bg-secondary fs-6 py-3 px-4">Flex item 3</span>
+                    </div>
+                </div>
+                
+                <!-- Bootstrap Alert 사용 -->
+                <div class="mb-4">
+                    <h6 class="text-muted">Bootstrap Alert - 양끝 정렬</h6>
+                    <div class="d-flex flex-row justify-content-between gap-2">
+                        <div class="alert alert-info mb-0 text-center flex-fill" style="max-width: 150px;">
+                            Flex item 1
+                        </div>
+                        <div class="alert alert-info mb-0 text-center flex-fill" style="max-width: 150px;">
+                            Flex item 2
+                        </div>
+                        <div class="alert alert-info mb-0 text-center flex-fill" style="max-width: 150px;">
+                            Flex item 3
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bootstrap List Group 사용 -->
+                <div class="mb-0">
+                    <h6 class="text-muted">Bootstrap List Group Item - Flex Row Reverse</h6>
+                    <div class="d-flex flex-row-reverse gap-2">
+                        <div class="list-group-item text-center" style="width: 150px;">Flex item 1</div>
+                        <div class="list-group-item text-center" style="width: 150px;">Flex item 2</div>
+                        <div class="list-group-item text-center" style="width: 150px;">Flex item 3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

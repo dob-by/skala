@@ -1,0 +1,29 @@
+<style>
+    .wrapper {
+      position: relative;
+      height: 160px;
+      background: #fee;
+    }
+    .static-box {
+      position: static;  /* 기본 흐름 */
+      background: #c88;
+    }
+    .relative-box {
+      position: relative;
+      top: 10px; left: 20px;
+      background: #8c8;
+    }
+    .absolute-box {
+      position: absolute;
+      top: 60px; left: 120px;
+      width: 80px; height: 40px;
+      background: #88c;
+    }
+  </style>
+  
+  <div class="wrapper">
+    <div class="static-box">Static</div>
+    <div class="relative-box">Relative</div>
+    <div class="absolute-box">Absolute</div>
+  </div>
+  

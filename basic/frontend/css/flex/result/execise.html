@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox 중앙 정렬</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    .container {
+      height: 150px; /* 화면 전체 높이 */
+      display: flex;
+      justify-content: center; /* 수평 중앙 정렬 */
+      align-items: center;     /* 수직 중앙 정렬 */
+      gap: 20px;
+      background-color: #f0f0f0;
+      border: black 1px dotted;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: steelblue;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 0;
+      flex-grow: 1;
+      flex-shrink: 1;
+      margin: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+</body>
+</html>

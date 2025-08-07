@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>object-fit: contain 예시</title>
+  <style>
+    .box {
+      width: 300px;
+      height: 200px;
+      border: 2px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #eee;
+    }
+
+    .box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>object-fit: cover 예시</h3>
+  <div class="box">
+    <img src="images/cat.png" alt="가로로 긴 이미지">
+  </div>
+
+</body>
+</html>

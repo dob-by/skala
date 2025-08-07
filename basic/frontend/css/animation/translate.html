@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Transform Translate 예시</title>
+    <style>
+      body {
+        background: white;
+        color: black;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+
+      .box {
+        width: 80px;
+        height: 80px;
+        background: gray;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      .translate-1 {
+        transform: translate(0px, 0px);
+      }
+
+      .translate-2 {
+        transform: translate(200px, 500px); /* 오른쪽 100px, 아래 100px 이동 */
+      }
+
+      .label {
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="translate-1">
+      <div class="box">↑</div>
+      <div class="label">translate(0, 0)</div>
+    </div>
+    <div class="translate-2">
+      <div class="box">↑</div>
+      <div class="label">translate(100px, 100px)</div>
+    </div>
+  </body>
+</html>

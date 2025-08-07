@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSS Grid Layout</title>
+    <style>
+      /* 그리드 컨테이너에서 열과 행 지정하기 */
+
+      .container {
+        display: block;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: minmax(100px, auto);
+      }
+      .items {
+        border: 1px solid #222;
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+      }
+      .items:nth-child(even) {
+        background-color: #ffc400;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="items">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit
+        consequuntur tenetur id dolores suscipit in? Saepe provident quas sunt
+        ut excepturi. Impedit minus nihil repellendus accusantium. Quis
+        repudiandae temporibus dolore.
+      </div>
+      <div class="items">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque provident
+        amet sint corrupti eius, illum explicabo iure nam quas vel consequuntur
+        nemo eaque saepe, sapiente adipisci laudantium autem praesentium. Ipsa!
+      </div>
+      <div class="items">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aperiam
+        quis tenetur quisquam, fugiat rerum sit velit numquam voluptates unde
+        accusamus, adipisci ex distinctio enim impedit temporibus eaque
+        laboriosam blanditiis!
+      </div>
+      <div class="items">4</div>
+      <div class="items">5</div>
+      <div class="items">6</div>
+    </div>
+  </body>
+</html>

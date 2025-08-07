@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>inline vs block vs inline-block</title>
+    <style>
+      .container {
+        background-color: #f0f0f0;
+        padding: 20px;
+      }
+
+      .label {
+        font-size: 14px;
+        margin-bottom: 10px;
+        display: block;
+        margin-top: 20px;
+      }
+
+      .box-inline {
+        display: inline;
+        background-color: lightcoral;
+        color: white;
+        width: 200px; /* 적용 안 됨 */
+        height: 60px; /* 적용 안 됨 */
+        padding: 10px;
+        border: 2px solid rgb(26, 23, 23);
+      }
+
+      .box-block {
+        display: block;
+        background-color: lightblue;
+        color: black;
+        width: 200px;
+        height: 60px;
+        padding: 10px;
+        border: 2px solid blue;
+        margin-bottom: 10px;
+      }
+
+      .box-inline-block {
+        display: inline-block;
+        background-color: lightgreen;
+        color: black;
+        width: 200px;
+        height: 60px;
+        padding: 10px;
+        border: 2px solid green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span class="label">1️⃣ inline (줄 바꿈 없음, 사이즈 지정 안 됨)</span>
+      <span class="box-inline">inline 요소</span>
+      <span class="box-inline">inline 요소</span>
+
+      <span class="label">2️⃣ block (줄 바꿈 있음, 사이즈 지정 가능)</span>
+      <div class="box-block">block 요소</div>
+      <div class="box-block">block 요소</div>
+
+      <span class="label"
+        >3️⃣ inline-block (줄 바꿈 없음, 사이즈 지정 가능)</span
+      >
+      <div class="box-inline-block">inline-block 요소</div>
+      <div class="box-inline-block">inline-block 요소</div>
+    </div>
+  </body>
+</html>

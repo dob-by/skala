@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>가상 클래스 선택자 예제</title>
+  <style>
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 20px;
+      text-decoration: none;
+      border: 2px solid #999;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    a:link {
+      color: black;
+      background-color: white;
+    }
+
+    a:visited {
+      color: gray;
+      background-color: #f5e6ff;
+    }
+
+    a:hover {
+      color: white;
+      background-color: #3399ff;
+    }
+
+    a:active {
+      color: white;
+      background-color: red;
+    }
+
+    input:focus {
+      outline: 3px solid #ff6600;
+      background-color: #fff5e6;
+    }
+
+    .desc {
+      font-size: 14px;
+      margin-top: 5px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>링크 가상 클래스 테스트</h2>
+  <a href="https://example.com" target="_blank">방문 테스트 링크</a>
+  <div class="desc">
+    <b style="background-color: white">:link</b><br>
+    <b style="background-color: #f5e6ff">:visited</b><br>
+    <b style="background-color: #3399ff">:hover</b><br>
+    <b style="background-color: red">:active</b>
+  </div>
+
+  <h2>입력창 :focus 테스트</h2>
+  <input type="text" placeholder="여기를 클릭해보세요">
+  <div class="desc" style="background-color: #ff6600b9;">포커스되면 주황 테두리와 밝은 배경으로 변합니다.</div>
+
+</body>
+</html>

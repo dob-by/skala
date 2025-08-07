@@ -1,0 +1,36 @@
+<style>
+  .box {
+    padding: 20px;
+    text-align: center;
+    background: gray;
+    font-size: 16px;
+  }
+
+  /* 모바일: max-width 480px */
+  @media (max-width: 480px) {
+    .box {
+      background: red;
+      font-size: 12px;
+    }
+  }
+
+  /* 태블릿: 481px ~ 768px */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .box {
+      background: orange;
+      font-size: 14px;
+    }
+  }
+
+  /* 데스크탑: 769px 이상 */
+  @media (min-width: 769px) {
+    .box {
+      background: green;
+      font-size: 18px;
+    }
+  }
+</style>
+
+<div class="box">
+  반응형 박스
+</div>

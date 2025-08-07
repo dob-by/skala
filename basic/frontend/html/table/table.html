@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        thead{
+            background-color: black;
+            color: white;
+        }
+        tbody tr td{
+            border: 1px solid black;
+            background-color: rgb(237, 232, 232);
+        }
+        tfoot {
+            background-color: white;
+            color: black;
+        }
+        tfoot tr td {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <table style="border: 1px solid black;">
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+                <th>직업</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>홍길동</td>
+                <td>30</td>
+                <td>개발자</td>
+            </tr>
+            <tr>
+                <td>김영희</td>
+                <td>25</td>
+                <td>디자이너</td>
+            </tr>
+            <tr>
+                <td>이순신</td>
+                <td>40</td>
+                <td>PM</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">총 인원</td>
+                <td>3명</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

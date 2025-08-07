@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"> <!-- 문서 전체의 언어(lang)와 글 방향(dir) 설정 -->
+<head>
+  <meta charset="UTF-8">
+  <title>글로벌 속성 예제</title>
+  <style>
+    .highlight { background: #fffae6; padding: 0.2em 0.4em; }
+  </style>
+</head>
+<body>
+
+  <!-- id, class, style, title -->
+  <h1 id="main-title"
+      class="highlight"
+      style="color: #0055aa;"
+      title="헤더에 적용된 id/class/style/title 예시">
+    글로벌 속성 데모
+  </h1>
+
+  <!-- lang -->
+  <p lang="en">
+    This paragraph is in English. (lang="en")
+  </p>
+
+  <!-- dir -->
+  <p dir="rtl">
+    오른쪽 방향 (dir="rtl")
+  </p>
+  <p dir="ltr">
+    왼쪽 방향 (dir="ltr")
+  </p>
+   <p dir="auto">
+    자동 방향 (dir="auto")
+  </p>
+
+  <!-- hidden -->
+  <p hidden>
+    이 문장은 hidden 속성으로 숨겨져 보이진 않습니다.
+  </p>
+
+  <!-- draggable, tabindex -->
+  <div draggable="true"
+       tabindex="0"
+       style="width:150px; height:50px; border:1px solid #333; margin:1em 0;"
+       title="이 박스를 드래그하거나 Tab 키로 포커스해보세요">
+    끌어서 이동하거나 Tab 키로 선택해 볼 수 있는 상자
+  </div>
+
+  <!-- spellcheck -->
+  <textarea spellcheck="true" rows="2" cols="30">
+맞춤법 검사(spellcheck)가 활성화된 텍스트 영역입니다.
+  </textarea>
+
+  <!-- contenteditable -->
+  <div contenteditable="true"
+       style="border:1px dashed #999; padding:0.5em; margin:1em 0;">
+    이 영역은 직접 편집(contenteditable)할 수 있습니다. 한번 수정해 보세요!
+  </div>
+
+  <!-- data-*, role, accesskey -->
+  <button data-action="save"
+          role="button"
+          accesskey="s"
+          tabindex="1">
+    저장하기 (Alt+S)
+  </button>
+
+  <!-- footer에 style과 title -->
+  <footer style="margin-top:2em; font-size:0.9em;"
+          title="저작권 정보">
+    © 2025 교육용 예제 페이지
+  </footer>
+
+</body>
+</html>

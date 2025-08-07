@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>로그인 폼</title>
+</head>
+<body>
+  <h2>로그인</h2>
+
+  <form id="loginForm">
+    <label for="username">아이디:</label>
+    <input type="text" id="username" name="username" required>
+    <br><br>
+
+    <label for="password">비밀번호:</label>
+    <input type="password" id="password" name="password" required>
+    <br><br>
+    
+    <button type="reset">초기화</button>
+    <button type="submit">로그인</button>
+  </form>
+
+  <script>
+    const form = document.getElementById("loginForm");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); // 기본 form 제출 방지
+
+      const formData = new FormData(form); // form 데이터 수집
+      const data = {
+        username: formData.get("username"),
+        password: formData.get("password")
+      };
+
+      fetch("http://localhost:8000/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("서버 오류 발생");
+        }
+        return response.json();
+      })
+      .then(result => {
+        console.log("로그인 성공:", result);
+        alert("로그인 성공");
+      })
+      .catch(error => {
+        console.error("로그인 실패:", error);
+        alert("로그인 실패");
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>align-content 예시</title>
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      height: 300px; /* 컨테이너 전체 높이 */
+      width: 240px;
+      border: 2px solid #333;
+      align-content: stretch; /* 위쪽 정렬 */
+      gap: 10px; /* 줄 사이 간격 */
+      padding: 10px;
+      background-color: #f7f9f9;
+    }
+
+    .box {
+      min-width: 100px; /* stretch를 위해 최소 너비 설정 */
+      min-height: 100px; /* stretch를 위해 최소 높이 설정 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .box:nth-child(1), .box:nth-child(3) {
+      background-color: orange;
+    }
+
+    .box:nth-child(2), .box:nth-child(4) {
+      background-color: seagreen;
+    }
+  </style>
+</head>
+<body>
+  <h2>align-content: flex-start</h2>
+  <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSS Grid Layout</title>
+    <style>
+      /* 그리드 컨테이너에서 열과 행 지정하기 */
+      .container {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-auto-rows: minmax(
+          100px,
+          auto
+        ); /* 자동으로 생성되는 행의 높이를 100px로 설정 */
+      }
+      .items {
+        padding: 10px;
+        margin: 5px;
+        font-size: 20px;
+        text-align: center;
+      }
+      .items:nth-child(even) {
+        background-color: #ffc400;
+      }
+
+      .box1 {
+        background-color: #3689ff;
+        grid-column: 1 / -1;
+        grid-row-start: 1;
+      }
+
+      .box2 {
+        background-color: #00cf12;
+        grid-column-start: 1;
+        grid-row: 2 / 4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="items box1">
+        WASHINGTON (AP) —a A U.S. intelligence report suggests that Iran’s
+        nuclear program has been set back only a few months after U.S. strikes
+        and was not “completely and fully obliterated” as President Donald Trump
+        has said, according to two people familiar with the early assessment.
+      </div>
+      <div class="items box2">
+        The report issued by the Defense Intelligence Agency on Monday
+        contradicts statements from Trump and Israeli Prime Minister Benjamin
+        Netanyahu about the status of Iran’s nuclear facilities
+      </div>
+      <div class="items">According to the people,</div>
+      <div class="items">
+        the report found that while the Sunday strikes at the Fordo
+      </div>
+      <div class="items">
+        Natanz and Isfahan nuclear sites did significant damage
+      </div>
+      <div class="items">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eaque sequi
+        iure laboriosam cupiditate quae, alias vel reprehenderit nemo fuga eum
+        soluta, culpa, quibusdam cum enim nobis. Culpa, tempora rem!
+      </div>
+      <div class="items">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A, cumque.
+        Incidunt at perferendis, molestias sed exercitationem quo ut sit sequi
+        delectus placeat velit expedita fugiat quos corrupti? Illum, quam
+        aspernatur?
+      </div>
+    </div>
+  </body>
+</html>

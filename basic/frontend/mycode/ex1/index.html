@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post Viewer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Post Viewer</h1>
+      <div class="view-toggle">
+        <button id="flexView">Flex View</button>
+        <button id="gridView">Grid View</button>
+      </div>
+    </header>
+
+    <main>
+      <div id="postContainer" class="flex-view"></div>
+      <div class="pagination">
+        <button id="prevBtn">&larr; Prev</button>
+        <span id="pageIndicator">Page 1</span>
+        <button id="nextBtn">Next &rarr;</button>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

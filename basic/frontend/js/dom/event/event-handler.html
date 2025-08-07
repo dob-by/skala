@@ -1,0 +1,14 @@
+<button id="myBtn">클릭하세요</button>
+
+<script>
+  const btn = document.getElementById('myBtn');
+
+  // 여러 이벤트 핸들러 등록 가능
+  btn.addEventListener('click', function () {
+    alert('첫 번째 알림!');
+  });
+
+  btn.addEventListener('click', function () {
+    alert('두 번째 알림!');
+  });
+</script>

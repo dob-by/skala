@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>반응형 Grid 시맨틱 레이아웃</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header"
+        "main"
+        "aside"
+        "footer";
+      grid-template-columns: 1fr;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      grid-area: main;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+
+    aside {
+      grid-area: aside;
+      background: #ddd;
+      padding: 20px;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        grid-template-areas:
+          "header header"
+          "main aside"
+          "footer footer";
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>사이트 제목</h1>
+    </header>
+
+    <main>
+      <h2>메인 콘텐츠</h2>
+      <p>여기에 주요 내용을 작성하세요.</p>
+    </main>
+
+    <aside>
+      <h2>사이드바</h2>
+      <p>보조 정보나 링크를 추가하세요.</p>
+    </aside>
+
+    <footer>
+      <p>&copy; 2025 My Website</p>
+    </footer>
+  </div>
+</body>
+</html>

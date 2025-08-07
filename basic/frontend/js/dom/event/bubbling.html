@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>이벤트 버블링 예제</title>
+</head>
+<body>
+  <div id="outer" style="padding: 50px; background-color: #d1e7dd;">
+    <button id="inner">클릭</button>
+  </div>
+
+  <script>
+    document.getElementById('outer').addEventListener('click', () => {
+      alert('outer clicked');
+    });
+
+    document.getElementById('inner').addEventListener('click', () => {
+      alert('inner clicked');
+    });
+  </script>
+</body>
+</html>

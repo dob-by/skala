@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>tabindex & draggable 예제</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .focusable { 
+      padding: 10px; 
+      margin: 10px 0; 
+      border: 2px solid hsl(0, 72%, 59%); 
+      border-radius: 4px; 
+    }
+    #dropZone {
+      width: 200px; height: 150px;
+      border: 2px dashed #888;
+      display: flex; align-items: center; justify-content: center;
+      color: #666;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- tabindex="0" 은 문서 흐름에 따라 자동으로 탭 순서에 포함 -->
+  <h1 tabindex="1" class="focusable">
+    제목: 포커스 가능 (tabindex="1")
+  </h1>
+
+  <!-- tabindex 값을 양수로 설정하면, 1→2 순서로 포커스 -->
+  <div tabindex="2" class="focusable">
+    첫 번째 탭 순서 (tabindex="2")
+  </div>
+
+  <button tabindex="3" class="focusable">
+    두 번째 탭 순서 버튼 (tabindex="3")
+  </button>
+
+  <!-- draggable="true" 로 요소를 드래그할 수 있게 함 -->
+  <img
+    src="https://via.placeholder.com/100"
+    alt="드래그 가능한 이미지"
+    draggable="true"
+    id="dragImg"
+    class="focusable"
+  >
+
+  <!-- 드롭 대상 영역 -->
+  <div id="dropZone">
+    여기에 이미지를 드롭하세요
+  </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>노드 조작 예제</title>
+  </head>
+  <body>
+    <div id="container">
+      <p id="old">기존 문장</p>
+    </div>
+
+    <button id="btn1">노드 추가</button>
+    <button id="btn2">노드 제거</button>
+    <button id="btn3">노드 교체</button>
+
+    <script>
+      const btn1 = document.getElementById("btn1");
+      const btn2 = document.getElementById("btn2");
+      const btn3 = document.getElementById("btn3");
+
+      let isReplaced = false; // 노드 교체 여부(상태) 기억할 변수
+
+      btn1.addEventListener("click", function () {
+        const newElement = document.createElement("p"); // <p> 요소 생성
+        newElement.textContent = "추가된 문장"; // 텍스트 설정
+        newElement.id = "new"; // id 설정
+        newElement.style.color = "blue"; // 스타일 설정
+        document.getElementById("container").appendChild(newElement); // 추가
+      });
+
+      btn1.addEventListener("dblclick", function () {
+        const container = document.getElementById("container");
+        const target = document.getElementById("new");
+        if (target) {
+          container.removeChild(target);
+        }
+      });
+
+      btn2.addEventListener("click", function () {
+        const container = document.getElementById("container");
+        const target = document.getElementById("new");
+        if (target) {
+          container.removeChild(target); // target 요소 제거
+        }
+      });
+
+      btn3.addEventListener("click", function () {
+        const container = document.getElementById("container");
+        const oldNode = document.getElementById("old");
+
+        const newNode = document.createElement("h3");
+        newNode.id = "old"; // 새 노드에 동일한 id 설정
+        newNode.textContent = "새로운 노드로 교체됨";
+
+        if (oldNode) {
+          container.replaceChild(newNode, oldNode); // target → h3로 교체
+        }
+      });
+    </script>
+  </body>
+</html>

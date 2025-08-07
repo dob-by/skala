@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>spellcheck & contenteditable 예제</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .editable {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      min-height: 80px;
+    }
+    .editable:focus {
+      outline: 2px solid #4a90e2;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>맞춤법 검사와 편집 가능한 영역</h1>
+
+  <!-- textarea에 spellcheck만 적용 -->
+  <label for="spellArea">이곳에 타이핑하면 맞춤법 검사가 동작합니다:</label><br>
+  <textarea id="spellArea" rows="4" cols="50" spellcheck="true">
+이곳에 글을 작성해보세요. 잘못된 맞춤법이 빨간 줄로 표시됩니다.
+  </textarea>
+
+  <!-- div에 contenteditable + spellcheck -->
+  <h2>contenteditable 영역</h2>
+  <div
+    class="editable"
+    contenteditable="true"
+    spellcheck="true"
+  >
+    이 문장을 클릭해서 자유롭게 수정해보세요.
+    맞춤법 에러가 있으면 자동으로 강조됩니다.
+  </div>
+
+  <!-- spellcheck 끄기 예시 -->
+  <h2>맞춤법 검사 비활성화</h2>
+  <div
+    class="editable"
+    contenteditable="true"
+    spellcheck="false"
+  >
+    이 영역에서는 맞춤법 검사가 수행되지 않습니다.
+  </div>
+
+</body>
+</html>

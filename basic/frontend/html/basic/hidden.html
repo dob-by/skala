@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>hidden 속성 예제</title>
+</head>
+<body>
+
+  <!-- 처음에는 보이지 않음 -->
+  <p id="secret" hidden>
+    🎁 이 문장은 hidden 속성 때문에 처음에 보이지 않습니다.
+  </p>
+
+  <button onclick="document.getElementById('secret').hidden = false;">
+    비밀 메시지 보기
+  </button>
+
+</body>
+</html>

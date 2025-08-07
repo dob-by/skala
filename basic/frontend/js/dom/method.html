@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <h1>with JavaScript</h1>
+
+    <div id="myDiv">Hello</div>
+    <p class="item">Item 1</p>
+    <p class="item">Item 2</p>
+    <script>
+        const element = document.getElementById("myDiv");
+        console.log("getElementById:", element.textContent); // Hello
+
+
+        const elements = document.getElementsByClassName("item");
+        console.log("getElementsByClassName:", elements.length); // 2
+        console.log("getElementsByClassName:", elements[0].textContent); // Item 1
+
+        const paragraphs = document.getElementsByTagName("p");
+        console.log("getElementsByTagName:", paragraphs.length); // 2
+        console.log("getElementsByTagName:", paragraphs[1].textContent); // Item 2
+
+        const headers = document.getElementsByTagName("h1");
+        console.log("getElementsByTagName:", headers.length); // 2
+        console.log("getElementsByTagName:", headers[1].textContent); // Subtitlej
+
+        const queryElement = document.querySelector("#myDiv");
+        console.log("querySelector:", queryElement.textContent); // Hello
+
+        const queryElements = document.querySelectorAll(".item");
+        console.log("querySelectorAll:", queryElements.length); // 2
+        console.log("querySelectorAll:", queryElements[0].textContent); // Item 1   
+
+    </script>
+</body>
+</html>

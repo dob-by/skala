@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>선택자 샘플</title>
+  <style>
+    /* 클래스 + 요소: class가 notice인 p 요소 */
+    p.notice {
+      font-size: 18px;
+    }
+
+    /* ID + 요소: ID가 header인 div 요소 */
+    div#header {
+      background: gray;
+      color: white;
+      padding: 10px;
+    }
+
+    /* 클래스 + 클래스: .btn이면서 .primary인 button만 */
+    button.btn.primary {
+      background-color: blue;
+      color: white;
+    }
+
+    /* 속성 선택자: type="text"이면서 required인 input */
+    input[type="text"][required] {
+      border: 1px solid red;
+    }
+
+    /* 가상 선택자: ul 내 첫 번째 li에 마우스를 올렸을 때 */
+    ul li:first-child:hover {
+      color: red;
+    }
+
+    /* 전체 + 가상 선택자: 마우스를 올린 모든 요소에 적용 */
+    *:hover {
+      background-color: yellow;
+    }
+
+    /* 복합 조합 선택자 */
+    section.news > article.featured h2.title + p.summary {
+      font-style: italic;
+      color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header">헤더 영역입니다</div>
+
+  <p class="notice">공지사항입니다.</p>
+
+  <button class="btn primary">등록</button>
+
+  <form>
+    <input type="text" required placeholder="이름을 입력하세요">
+  </form>
+
+  <ul>
+    <li>첫 번째 항목</li>
+    <li>두 번째 항목</li>
+  </ul>
+
+  <section class="news">
+    <article class="featured">
+      <h2 class="title">뉴스 제목</h2>
+      <p class="summary">요약 설명입니다</p>
+    </article>
+  </section>
+
+</body>
+</html>

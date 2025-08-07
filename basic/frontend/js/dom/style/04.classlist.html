@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"><title>classList 조작</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+      font-size: 18px;
+    }
+    .red {
+      color: red;
+    }
+    .blue {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="box">Hello</div>
+  <button id="toggle">클래스 토글</button>
+  <button id="change" onClick="changeStyle()">색상 토글</button>
+
+  <script>
+
+    let btn = document.getElementById("toggle");
+    btn.addEventListener("click", function() {
+      const el = document.getElementById("box");
+      if (el.classList.toggle("highlight")) {
+      }
+    });
+
+    let isRed = true;
+
+    function changeStyle() {
+      const el = document.getElementById("box");
+      el.classList.remove(isRed ? "blue" : "red");
+      el.classList.add(isRed ? "red" : "blue");
+      isRed = !isRed;
+    }
+
+  </script>
+</body>
+</html>

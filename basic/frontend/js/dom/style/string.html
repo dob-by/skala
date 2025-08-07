@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta charset="UTF-8"><title>style 문자열 설정</title></head>
+<body>
+  <div id="box2">Hello</div>
+  <button onclick="setStyle()">스타일 문자열 설정</button>
+
+  <script>
+    function setStyle() {
+      const el = document.getElementById("box2");
+      el.setAttribute("style", "color: red; font-size: 20px;");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<div>
+    <!-- 텍스트 입력 -->
+    <fieldset>
+        <legend>기본 정보</legend>
+        <label for="username">사용자 이름:</label>
+        <input type="text" id="username" name="username" placeholder="사용자 이름" required><br>
+
+        <!-- 이메일 입력 -->
+        <label for="email">이메일:</label>
+        <input type="email" id="email" name="email" placeholder="이메일" required><br>
+
+        <!-- 비밀번호 입력 -->
+        <label for="password">비밀번호:</label>
+        <input type="password" id="password" name="password" placeholder="비밀번호" required><br>
+
+        <!-- 생년월일 -->
+        <label for="birthdate">생년월일:</label>
+        <input type="date" id="birthdate" name="birthdate" pattern="\d{4}-\d{2}-\d{2}" required><br>
+
+        <!-- 전화번호 -->
+        <label for="phone">전화번호:</label>
+        <input type="tel" id="phone" name="phone" placeholder="전화번호" required>
+        <small>형식: 010-1234-5678</small><br>  
+
+        <!-- 파일 업로드 -->
+        <label for="field">필드:</label>
+        <input type="file" id="field" name="field" accept=".jpg, .jpeg, .png, .gif, .pptx"><br>
+
+        <input type="color" value="#ff0000" id="colorPicker" name="colorPicker">
+
+    </fieldset>
+    <!-- 체크박스 -->
+    <fieldset>
+        <!-- 라디오 버튼 -->
+        <label for="gender">성별:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">남성</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">여성</label><br>
+
+        <!-- 드롭다운 선택 -->
+        <label for="country">국가:</label>
+        <select id="country" name="country" required>
+            <option value="korea" selected>대한민국</option>
+            <option value="usa">미국</option>
+            <option value="china">중국</option>
+        </select><br>
+
+        <legend>추가 정보</legend>
+        <label for="newsletter">뉴스레터 구독:</label>
+        <input type="checkbox" id="newsletter" name="newsletter"><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>요청사항</legend>
+        <!-- textarea 입력 -->
+        <label for="message">요청사항:</label>
+        <textarea id="message" name="message" rows="8" cols="80" required></textarea><br>
+
+        <!-- datalist와 range 입력 -->
+        <label for="fruit">좋아하는 과일을 선택하세요:</label>
+        <input list="fruits" id="fruit" name="fruit">
+        <datalist id="fruits">
+            <option value="Apple">
+            <option value="Banana">
+            <option value="Cherry">
+            <option value="Grape">
+        </datalist>
+        <!-- output -->
+        <label for="rangeInput">값 조절:</label>
+        <input type="range" id="rangeInput" min="0" max="100" step="1" oninput="output.value = rangeInput.value">
+        <output id="output" for="rangeInput">50</output>
+    </fieldset>
+
+    <button type="reset">초기화</button>
+    <button type="submit">제출</button>
+</div>

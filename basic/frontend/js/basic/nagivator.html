@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const navi = {
+            userAgent: navigator.userAgent,
+            language: navigator.language,
+            platform: navigator.platform,
+            onLine: navigator.onLine,
+            cookieEnabled: navigator.cookieEnabled
+        }
+        window.alert(JSON.stringify(navi));
+    </script>
+</body>
+</html>

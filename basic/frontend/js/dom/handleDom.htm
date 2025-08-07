@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM 선택자 예제</title>
+  <style>
+    .desc {
+      color: blue;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>  
+</head>
+<body>
+
+  <h1 id="title">제목입니다</h1>
+  <p class="desc">첫 번째 문단</p>
+  <p class="desc">두 번째 문단</p>
+  <div class="box">박스입니다</div>
+  <span>태그 예시</span>
+  <span>또 다른 태그</span>
+
+  <script>
+    // 1. getElementById - ID는 '#' 없이 사용
+    const title = document.getElementById('title');
+    console.log("getElementById:", title.textContent);
+
+    // 2. getElementsByClassName - 클래스 이름은 '.' 없이 사용, HTMLCollection 반환
+    const descs = document.getElementsByClassName('desc');
+    for (let el of descs) {
+      console.log("getElementsByClassName:", el.textContent);
+    }
+
+    // 3. getElementsByTagName - 태그 이름으로 요소 선택
+    const spans = document.getElementsByTagName('span');
+    for (let el of spans) {
+      console.log("getElementsByTagName:", el.textContent);
+    }
+
+    // 4. querySelector - CSS 선택자 사용, 첫 번째 일치 요소 반환
+    const firstDesc = document.querySelector('.desc');
+    console.log("querySelector:", firstDesc.textContent);
+
+    // 5. querySelectorAll - CSS 선택자 사용, NodeList 반환 (반복 가능)
+    const allDesc = document.querySelectorAll('.desc');
+    allDesc.forEach(el => console.log("querySelectorAll:", el.textContent));
+  </script>
+
+</body>
+</html>

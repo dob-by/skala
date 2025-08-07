@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const user = {
+            name: 'John',
+            age: 30,
+            city: 'New York'
+        };
+        const info = '정보 메시지';
+        const warning = '경고 메시지';
+        const debug = '디버그 메시지';
+        const err = new Error('에러 발생');
+        console.group('로그 그룹');
+        console.time('interval');
+        console.log('현재 사용자:', user);
+        console.info('정보 메시지:', info);
+        console.warn('경고 메시지:', warning);
+        console.debug('디버그 메시지:', debug);
+        console.error('에러 발생:', err);
+        console.table([{id:1, name:'A'}, {id:2, name:'B'}]);
+        console.timeEnd('interval');
+        console.groupEnd();
+    </script>
+</body>
+</html>

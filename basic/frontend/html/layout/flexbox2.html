@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .flex-container {
+          display: flex;              /* flex 모드 시작 */
+          justify-content: space-around ;    /* 주축(가로) 중앙 정렬 */
+          align-items: left;        /* 교차축(세로) 중앙 정렬 */
+          height: 120px;
+          background: #eef;
+        }
+        .flex-item {
+          width: 60px; height: 60px;
+          margin: 0 8px;
+          background: #88c;
+          color: #f9f4f4;
+          line-height: 60px;
+          text-align: center;
+        }
+      </style>
+      
+      <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+      </div>
+      
+</body>
+</html>

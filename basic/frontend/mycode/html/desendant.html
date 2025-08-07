@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>하위 선택자 예제</title>
+    <style>
+      section > p {
+        color: blue;
+        font-weight: bold;
+      }
+
+      h1 ~ p {
+        background-color: teal;
+      }
+
+      a[href]:hover {
+        background-color: palevioletred;
+      }
+
+      a[target="_blank"] {
+        background-color: violet;
+      }
+
+      a[target="_blank"]:active {
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>예약 방법 & 사용 요금</h1>
+      <p>아직 온라인 예약 신청이</p>
+      <a>온라인 예약 신청링크</a>
+      <a href="www.google.com">온라인 예약 신청링크</a>
+      <a target="_blank"">온라인 예약 신청링크</a>
+      <a thref="www.google.com" arget="_blank"">온라인 예약 신청링크</a>
+      <div>
+        <p>가족실(2~4인): 60,000원/일</p>
+        <p>도미토리(4인 공용): 25,000원/일</p>
+      </div>
+    </section>
+  </body>
+</html>

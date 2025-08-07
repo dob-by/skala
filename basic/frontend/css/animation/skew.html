@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Transform Skew 예시</title>
+    <style>
+      body {
+        background: white;
+        color: black;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 60px;
+        margin-top: 30px;
+      }
+
+      .box {
+        width: 80px;
+        height: 80px;
+        background: gray;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      /* Skew 변형 */
+      .skew-0 {
+        transform: skew(0deg, 0deg);
+      }
+
+      .skew-x {
+        transform: skewX(25deg);
+      }
+
+      .skew-y {
+        transform: skewY(25deg);
+      }
+
+      .label {
+        font-size: 14px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="box skew-0">↑</div>
+      <div class="label">skew(0deg, 0deg)</div>
+    </div>
+    <div>
+      <div class="box skew-x">↑</div>
+      <div class="label">skewX(25deg)</div>
+    </div>
+    <div>
+      <div class="box skew-y">↑</div>
+      <div class="label">skewY(25deg)</div>
+    </div>
+  </body>
+</html>

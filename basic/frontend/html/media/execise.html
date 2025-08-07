@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>나의 여행 앨범</title>
+  </head>
+  <body>
+    <h1>🗺️ 나의 여행 앨범 🎵</h1>
+    <!-- 1. 배경음악 -->
+    <div
+      style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px"
+    >
+      <audio controls width="100%">
+        <source src="media/sound.mp3" type="audio/mpeg" />
+      </audio>
+
+      <video controls width="100%">
+        <source src="media/movie.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <main>
+      <!-- 2. 파밀리아 대성당 (반응형) -->
+      <figure>
+        <picture>
+          <!-- 폭 600px 이하일 때 작은 그림 -->
+          <source media="(max-width: 600px)" srcset="media/small.jpg" />
+          <!-- 그 외에는 큰 그림 -->
+          <source media="(min-width: 601px)" srcset="media/large.jpg" />
+          <!-- 폴백 이미지 --><img
+            src="media/rome.jpg"
+            alt="파밀리아 대성당"
+            style="width: 100%; height: auto"
+          />
+        </picture>
+        <figcaption>파밀리아 대성당</figcaption>
+      </figure>
+
+      <!-- 3. 로마 콜로세움 -->
+      <figure>
+        <img
+          src="media/rome.jpg"
+          alt="로마 콜로세움"
+          style="width: 100%; height: auto"
+        />
+        <figcaption>로마 콜로세움</figcaption>
+      </figure>
+
+      <!-- 4. 시드니 오페라 하우스 -->
+      <figure>
+        <img
+          src="media/opera.jpg"
+          alt="시드니 오페라 하우스"
+          style="width: 100%; height: auto"
+        />
+        <figcaption>시드니 오페라 하우스</figcaption>
+      </figure>
+    </main>
+  </body>
+</html>

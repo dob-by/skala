@@ -1,0 +1,143 @@
+/* 기본 설정 */
+body {
+  font-family: "Segoe UI", "Pretendard", "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* 헤더 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #4f46e5;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.view-toggle button {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: white;
+  color: #4f46e5;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.view-toggle button:hover {
+  background-color: #e0e7ff;
+}
+
+/* 공통 컨테이너 */
+#postContainer {
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+/* Flex View */
+.flex-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.flex-view .card {
+  flex: 1 1 80%;
+  max-width: 600px;
+}
+
+/* Grid View */
+.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* 카드 공통 */
+.card {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  word-break: break-word;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.card p {
+  margin: 0;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+/* 페이지네이션 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+
+.pagination button {
+  padding: 0.6rem 1.2rem;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #4338ca;
+}
+
+#pageIndicator {
+  font-weight: bold;
+  color: #374151;
+}
+
+/* 반응형 */
+@media (max-width: 600px) {
+  .flex-view .card {
+    flex: 1 1 100%;
+  }
+
+  .grid-view {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

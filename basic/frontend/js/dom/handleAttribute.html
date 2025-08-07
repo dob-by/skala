@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>속성 조작 예제</title>
+</head>
+<body>
+
+  <img id="myImage">
+
+  <button onclick="setAttr()">속성 설정</button>
+  <button onclick="getAttr()">속성 가져오기</button>
+  <button onclick="removeAttr()">속성 제거</button>
+
+  <script>
+    function setAttr() {
+      const img = document.getElementById("myImage");
+      img.setAttribute("src", "media/familia-small.jpg");
+      img.setAttribute("alt", "새로운 이미지입니다.");
+      console.log("속성이 설정되었습니다.");
+    }
+
+    function getAttr() {
+      const img = document.getElementById("myImage");
+      const srcValue = img.getAttribute("src");
+      const altValue = img.getAttribute("alt");
+      console.log("src:", srcValue);
+      console.log("alt:", altValue);
+    }
+
+    function removeAttr() {
+      const img = document.getElementById("myImage");
+      img.removeAttribute("src");
+      console.log("src 속성이 제거되었습니다.");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>History API 데모</title>
+    <style>
+      button {
+        margin: 5px;
+        padding: 10px;
+      }
+      #output {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>📜 History API 예제</h2>
+
+    <button onclick="goToPage('home')">home</button>
+    <button onclick="goToPage('about')">about</button>
+    <button onclick="goToPage('contact')">contact</button>
+    <button onclick="replaceToPage('replace')">replace</button>
+
+    <button onclick="history.back()">⬅ 이전</button>
+    <button onclick="history.forward()">➡ 다음</button>
+
+    <div id="output">현재 페이지: home</div>
+
+    <script>
+      const output = document.getElementById("output");
+
+      function goToPage(page) {
+        // URL 경로를 바꾸면서 히스토리 스택에 상태 저장
+        history.pushState({ page: page }, "", `?page=${page}`);
+        updatePage(page);
+      }
+
+      function replaceToPage(page) {
+        // 현재 상태를 대체하면서 URL 경로를 바꿈
+        history.replaceState({ page: page }, "", `?page=${page}`);
+        updatePage(page);
+      }
+
+      function updatePage(page) {
+        output.textContent = "현재 페이지: " + page;
+      }
+
+      // 뒤로가기, 앞으로가기 할 때 발생하는 이벤트
+      // popstate 이벤트는 히스토리 스택의 상태가 변경될 때 발생
+      window.addEventListener("popstate", function (event) {
+        const page = event.state?.page || "home";
+        updatePage(page);
+      });
+
+      // 초기 로딩 시 URL에 따라 표시 (새로고침 대비)
+      // DOMContentLoaded 이벤트는 HTML 문서가 완전히 로드된 후 실행
+      window.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(location.search);
+        const page = params.get("page") || "home";
+        updatePage(page);
+      });
+    </script>
+  </body>
+</html>

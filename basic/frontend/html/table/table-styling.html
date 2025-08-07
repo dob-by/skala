@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>border-collapse 비교</title>
+  <style>
+    /* 공통 스타일: 테두리와 안쪽 여백 */
+    table {
+      margin: 16px;
+    }
+    th, td {
+      border: 1px solid #2911b6;
+      padding: 8px;
+    }
+
+    /* ① 기본 (separate) */
+    #tbl-separate {
+      border-collapse: separate;    /* 명시적이지만, 별도 설정 없으면 기본값 */
+      border-spacing: 20px;          /* 셀끼리 20px 간격 */
+    }
+
+    /* ② 병합 (collapse) */
+    #tbl-collapse {
+      border-collapse: collapse;
+      /* border-spacing는 무시됨 */
+    }
+  </style>
+</head>
+<body>
+
+  <h2>① border-collapse: separate (기본)</h2>
+  <table id="tbl-separate">
+    <thead>
+      <tr>
+        <th>제품</th>
+        <th>가격</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>노트북</td><td>1,200,000₩</td></tr>
+      <tr><td>마우스</td><td>25,000₩</td></tr>
+    </tbody>
+  </table>
+
+  <h2>② border-collapse: collapse</h2>
+  <table id="tbl-collapse">
+    <thead>
+      <tr>
+        <th>제품</th>
+        <th>가격</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>노트북</td><td>1,200,000₩</td></tr>
+      <tr><td>마우스</td><td>25,000₩</td></tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

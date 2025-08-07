@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>History API 간단 예제</title>
+</head>
+<body>
+  <!-- 링크 -->
+  <a href="/" id="link-home">Home</a> | 
+  <a href="/page2" id="link-page2">Page 2</a>
+  
+  <!-- 내비게이션 버튼 -->
+  <button id="btn-back">뒤로</button>
+  <button id="btn-forward">앞으로</button>
+
+  <!-- 콘텐츠 영역 -->
+  <div id="content">이곳에 내용이 표시됩니다.</div>
+
+  <script>
+    // 현재 경로에 맞는 콘텐츠 표시 함수
+    function render(path) {
+      const c = document.getElementById('content');
+      c.textContent = (path === '/page2')
+        ? '여기는 Page 2 입니다.'
+        : '여기는 Home 입니다.';
+    }
+
+    // 링크 클릭 처리 (preventDefault로 기본 이동 막음)
+    document.getElementById('link-home').addEventListener('click', e => {
+      e.preventDefault();
+      history.pushState({path: '/'}, '', '/');
+      render('/');
+    });
+
+    document.getElementById('link-page2').addEventListener('click', e => {
+      e.preventDefault();
+      history.pushState({path: '/page2'}, '', '/page2');
+      render('/page2');
+    });
+
+    // 뒤로/앞으로 버튼 클릭 처리
+    document.getElementById('btn-back').addEventListener('click', () => {
+      history.back();    // 또는 history.go(-1)
+    });
+    document.getElementById('btn-forward').addEventListener('click', () => {
+      history.forward(); // 또는 history.go(1)
+    });
+
+    // 브라우저 뒤로/앞으로 버튼 클릭 시
+    window.addEventListener('popstate', e => {
+      render(location.pathname);
+    });
+
+    // history.back() 또는 history.forward() 호출 시 실행되는 이벤트 핸들러
+    window.onpopstate = function(event) {
+        console.log('이전/다음 기록으로 이동했습니다:', event.state);
+    };
+  </script>
+</body>
+</html>
